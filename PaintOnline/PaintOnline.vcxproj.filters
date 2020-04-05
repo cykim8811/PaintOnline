@@ -27,12 +27,18 @@
     <ClCompile Include="Server.cpp">
       <Filter>소스 파일\Network</Filter>
     </ClCompile>
+    <ClCompile Include="tools.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Server.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Client.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="tools.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
