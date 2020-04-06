@@ -15,7 +15,7 @@ public:
 	Server(unsigned short PORT);
 	virtual void tick(double dT) {};
 	virtual int receive(char* data) { return -1; };
-	void send(char* data);
+	void send(tcp::socket* socket, char* data);
 
 	io_service ioservice;
 	thread* t_run;

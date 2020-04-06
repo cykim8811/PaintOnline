@@ -49,6 +49,11 @@ Server::Server(unsigned short PORT) {
 }
 
 
-void Server::send(char* data) {
-
+void Server::send(tcp::socket* socket, char* data) {
+	char dt[128];
+	strcpy(dt, data);
+	strcat(dt, "!");
+	boost::system::error_code r_error;
+	int len_r_buf = strnlen_s(dt, 128 - 1);
+	socket->write_some(boost::asio::buffer(dt, len_r_buf), r_error);
 }
